@@ -29,32 +29,14 @@ void setup() {
   Timer1.attachInterrupt(upNum);
 }
 void loop() {
-  digitalWrite(sel_pins[0], LOW);// 가장 오른쪽 세그먼트 켜기
-  for (j = 0; j < 8; j++) {
-    digitalWrite(seg_pins[j], seg[number[0]][j]); // 현재 시각에 해당하는 숫자 켜기
+  for (int k = 0 ; k < 4 ; k++) {
+    digitalWrite(sel_pins[k], LOW);// 가장 오른쪽 세그먼트 켜기
+    for (j = 0; j < 8; j++) {
+      digitalWrite(seg_pins[j], seg[number[k]][j]); // 현재 시각에 해당하는 숫자 켜기
+    }
+    delay(2);
+    digitalWrite(sel_pins[k], HIGH); // 가장 오른쪽 세그먼트 끄기
   }
-  delay(2);
-  digitalWrite(sel_pins[0], HIGH); // 가장 오른쪽 세그먼트 끄기
-  digitalWrite(sel_pins[1], LOW); // 오른쪽 2번째 세그먼트 켜기
-  for (j = 0; j < 8; j++) {
-    digitalWrite(seg_pins[j], seg[number[1]][j]); // 현재 시각에 해당하는 숫자 켜기
-  }
-  delay(2);
-  digitalWrite(sel_pins[1], HIGH); // 오른쪽 2번째 세그먼트 끄기
-  digitalWrite(sel_pins[2], LOW); // 오른쪽 3번째 세그먼트 켜기
-  for (j = 0; j < 7; j++) {
-    digitalWrite(seg_pins[j], seg[number[2]][j]); // 해당 숫자 출력
-  }
-  digitalWrite(seg_pins[7], HIGH ); // DP 켜기 ( 소수점 )
-  delay(2);
-  digitalWrite(sel_pins[2], HIGH); // 오른쪽 3번째 세그먼트 끄기
-  digitalWrite(sel_pins[3], LOW); // 가장 왼쪽 세그먼트 켜기
-  for (j = 0; j < 8; j++) {
-    digitalWrite(seg_pins[j], seg[number[3]][j]); // 해당 숫자 출력
-  }
-  delay(2);
-  digitalWrite(sel_pins[3], HIGH); // 가장 왼쪽 세그먼트 끄기
-  delay(2);
 }
 
 void upNum() {
