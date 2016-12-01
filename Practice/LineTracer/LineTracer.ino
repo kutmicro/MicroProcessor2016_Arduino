@@ -25,59 +25,59 @@ void loop()
 
   if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == LOW) // O X X X
   {
-    analogWrite(LMOTOR, 66);
+    analogWrite(LMOTOR, 69);
     analogWrite(RMOTOR, 0);
   }
   else if (digitalRead(sensor_pin[0]) == LOW && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == HIGH) // X X X O
   {
     analogWrite(LMOTOR, 0);
-    analogWrite(RMOTOR, 88);
+    analogWrite(RMOTOR, 92);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == HIGH) // O X X O
   {
-    analogWrite(LMOTOR, 66);
-    analogWrite(RMOTOR, 88);
+    analogWrite(LMOTOR, 60);
+    analogWrite(RMOTOR, 80);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == LOW) { // O O X X
-    analogWrite(LMOTOR, 66);
+    analogWrite(LMOTOR, 69);
     analogWrite(RMOTOR, 0);
   }
   else if (digitalRead(sensor_pin[0]) == LOW && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == HIGH) { // X X O O
     analogWrite(LMOTOR, 0);
-    analogWrite(RMOTOR, 88);
+    analogWrite(RMOTOR, 92);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == LOW) { // O X O X
-    analogWrite(LMOTOR, 66);
+    analogWrite(LMOTOR, 69);
     analogWrite(RMOTOR, 0);
   }
   else if (digitalRead(sensor_pin[0]) == LOW && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == HIGH) { // X O X O
     analogWrite(LMOTOR, 0);
-    analogWrite(RMOTOR, 88);
+    analogWrite(RMOTOR, 92);
   }
   else if (digitalRead(sensor_pin[0]) == LOW && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == HIGH) // X O O O
   {
     analogWrite(LMOTOR, 0);
-    analogWrite(RMOTOR, 88);
+    analogWrite(RMOTOR, 92);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == HIGH) // O X O O
   {
     analogWrite(LMOTOR, 0);
-    analogWrite(RMOTOR, 88);
+    analogWrite(RMOTOR, 92);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == HIGH) // O O X O
   {
-    analogWrite(LMOTOR, 66);
+    analogWrite(LMOTOR, 69);
     analogWrite(RMOTOR, 0);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == LOW) // O O O X
   {
-    analogWrite(LMOTOR, 66);
+    analogWrite(LMOTOR, 69);
     analogWrite(RMOTOR, 0);
   }
   else if (digitalRead(sensor_pin[0]) == HIGH && digitalRead(sensor_pin[1]) == HIGH && digitalRead(sensor_pin[2]) == HIGH && digitalRead(sensor_pin[3]) == HIGH) // O O O O
   {
-    analogWrite(LMOTOR, 66);
-    analogWrite(RMOTOR, 88);
+    analogWrite(LMOTOR, 60);
+    analogWrite(RMOTOR, 80);
   }
   if (digitalRead(sensor_pin[0]) == LOW && digitalRead(sensor_pin[1]) == LOW && digitalRead(sensor_pin[2]) == LOW && digitalRead(sensor_pin[3]) == LOW) // X X X X
   {
@@ -85,7 +85,6 @@ void loop()
     analogWrite(RMOTOR, 0);
   }
   //알고리즘 끝
-  delay(50);
 
 }
 
